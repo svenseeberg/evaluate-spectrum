@@ -19,7 +19,7 @@ with open(sys.argv[1]+'.csv', 'w+') as f:
  
   #iterate through the x axis
   for x in range(width):
-    #iterate through the y axis:
+    #iterate through the y axis and sum rgb values:
     r = 0
     b = 0
     g = 0
@@ -27,6 +27,7 @@ with open(sys.argv[1]+'.csv', 'w+') as f:
       r = r + pix[x,y][0]
       g = g + pix[x,y][1]
       b = b + pix[x,y][2]
+    #calculate average brightness
     r = r / height
     g = g / height
     b = b / height
